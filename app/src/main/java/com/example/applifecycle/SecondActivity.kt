@@ -3,6 +3,7 @@ package com.example.applifecycle
 import android.content.Intent
 import android.os.Bundle
 import android.util.Log
+import android.view.View
 import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.view.ViewCompat
@@ -37,11 +38,15 @@ class SecondActivity : AppCompatActivity() {
     override fun onResume() {
         super.onResume()
         Log.d(TAG, "onResume: ${this::class.simpleName}")
+
+        binding.progressBar.visibility = View.VISIBLE
     }
 
     override fun onPause() {
         super.onPause()
         Log.d(TAG, "onPause: ${this::class.simpleName}")
+
+        binding.progressBar.visibility = View.GONE
     }
 
     override fun onStop() {
