@@ -7,6 +7,8 @@ import android.util.Log
 
 class CustomApplication: Application() {
 
+    // adb shell ps -o PID,NAME | grep com.example.applifecycle
+
     class MyActivityLifecycleCallbacks: ActivityLifecycleCallbacks{
         override fun onActivityCreated(activity: Activity, savedInstanceState: Bundle?) {
             Log.d(TAG2, "onActivityCreated: ${activity::class.simpleName}")
